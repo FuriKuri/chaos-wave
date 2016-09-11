@@ -11,7 +11,7 @@ $ docker run -v /var/run/docker.sock:/var/run/docker.sock furikuri/chaos-wave --
 Default **interval** is 10 minutes.
 Default **duration** is 1 hour.
 
-### Example usage in docker swarm
+### Example usage with docker swarm service
 
 First start a service within docker swarm.
 
