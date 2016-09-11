@@ -48,9 +48,9 @@ CONTAINER ID        IMAGE                          COMMAND                  CREA
 44864f1ef4f6        furikuri/chaos-wave            "/app/main --interval"   33 seconds ago       Up 31 seconds                           high_hugle
 c51676f6731f        furikuri/hello-docker:latest   "/bin/sh -c 'node ser"   About a minute ago   Up About a minute   3000/tcp            hello-docker.1.8q22jjf5i7trubngv8wo4sh1v
 e0f33516014e        furikuri/hello-docker:latest   "/bin/sh -c 'node ser"   About a minute ago   Up About a minute   3000/tcp            hello-docker.3.3yyalv0viof2x3runw9nb4yyr
-
-
 ```
+
+But after a few seconds, docker swarm should start a new container.
 
 ```
 Every 2,0s: docker ps                                                                                                                                                Sun Sep 11 12:33:01 2016
@@ -67,3 +67,5 @@ e0f33516014e        furikuri/hello-docker:latest   "/bin/sh -c 'node ser"   Abou
 - [ ] Regex argument for container names to kill
 
 ## License
+
+MIT
