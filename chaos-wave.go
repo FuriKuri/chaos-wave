@@ -20,11 +20,13 @@ func main() {
 		nil,
 		map[string]string{"User-Agent": "chaos-wave-0.1"})
 	randomGen := rand.New(rand.NewSource(time.Now().UnixNano()))
+
 	if err != nil {
 		panic(err)
 	}
-	fmt.Printf("Duration: %s.\n", duration())
-	fmt.Printf("Interval: %s.\n", interval())
+
+	fmt.Printf("Duration: %s\n", duration())
+	fmt.Printf("Interval: %s\n", interval())
 	endTime := time.Now().Add(duration())
 	for endTime.After(time.Now()) {
 		time.Sleep(interval())
@@ -51,7 +53,7 @@ func stopRandomContainer(cli *client.Client, randomGen *rand.Rand) {
 	}
 	if len(validContainers) > 0 {
 		containerToStop := validContainers[randomGen.Intn(len(validContainers))]
-		fmt.Printf("Stopping container with name '%s' \n", containerToStop.Names[0])
+		fmt.Printf("Stop and remove container with name '%s' \n", containerToStop.Names[0])
 		stopAndRemoveContainer(containerToStop, cli)
 	}
 }
