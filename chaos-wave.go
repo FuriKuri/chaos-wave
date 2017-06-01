@@ -16,7 +16,7 @@ const (
 func main() {
 	cli, err := client.NewClient(
 		"unix:///var/run/docker.sock",
-		"v1.22",
+		"v1.29",
 		nil,
 		map[string]string{"User-Agent": "chaos-wave-0.1"})
 	randomGen := rand.New(rand.NewSource(time.Now().UnixNano()))
